@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RUTI</title>
+  <%= stylesheet_link_tag		"style.css"%>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="header">
+	<%= image_tag "ruby_mlu_logo.png", :size =>"100x100" %>
+	<p>RUTI</p>
+	</div>
+	<h1>Ruby User Tools der Informatik</h1> 
+
+	
+	<div id="links">
+		<h2>Login-/ Nutzerverwaltung</h2>
+
+		<h2>Admin Links</h2>
+		<%= render "shared/adminLinks" %>
+	</div>
+
+	<div id="rechts">
+		<h2>Ldap</h2>
+
+		<h2>Sonstige Funktionen</h2>
+	</div>
+	
+	<div id="inhalt">
+		<%= yield %>
+	</div>
+	
+
+
+	<div id="footer">
+		<%= render "shared/footer" %>
+	</div>
+		
+
+</body>
+</html>
